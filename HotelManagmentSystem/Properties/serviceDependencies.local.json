@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "ConnectionStrings:db_a86fbd_hmsdb",
+      "secretStore": null
+    },
+    "appInsights1": {
+      "type": "appInsights.sdk"
+    }
+  }
+}

@@ -1,0 +1,665 @@
+﻿@model HotelManagmentSystem.Models.DB.tbl_booking
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sky View Hotel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/ViewContent/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="~/Content/ViewContent/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/themify-icons.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/nice-select.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/flaticon.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/gijgo.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/animate.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/slicknav.css">
+    <link rel="stylesheet" href="~/Content/ViewContent/css/style.css">
+    
+</head>
+
+<body>
+ 
+   
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-5 col-lg-6">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="@Url.Action("Home","View")">home</a></li>
+                                        <li><a href="@Url.Action("Room","View")">rooms</a></li>
+                                        <li><a href="@Url.Action("About","View")">About</a></li>
+                                       
+                                        <li><a href="@Url.Action("Contact","View")">Contact</a></li>
+                                        
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="@Url.Action("Home","View")">
+                                    @*<img src="~/Content/ViewContent/img/logo.png" alt="">*@
+                                    <li>Sky View Hotel</li>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-4 d-none d-lg-block">
+                            <div class="book_room">
+                                <div class="socail_links">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-facebook-square"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="book_btn d-none d-lg-block">
+                                    
+                                    <a class="popup-with-form" href="#test-form">Book Room</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Sky View</h3>
+                                <p>Enjoy Your Holidays With Us</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Sky View Nature</h3>
+                                <p>Enjoy Your Holidays With Us</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Sky View</h3>
+                                <p>Enjoy Your Holidays With Us</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Sky View Nature</h3>
+                                <p>Enjoy Your Holidays With Us</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+    <!-- about_area_start -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="about_info">
+                        <div class="section_title mb-20px">
+                            <span>About Us</span>
+                            <h3>
+                                Beach Luxury And <br>
+                                Best Enviorment
+                            </h3>
+                        </div>
+                        <p>
+                            I'm so fast that last night I turned off the light switch in my hotel room and
+                            was in bed before the room was dark.The great advantage of a hotel is that it is
+                            a refuge from home life.
+                        </p>
+                     
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7">
+                    <div class="about_thumb d-flex">
+                        <div class="img_1">
+                            <img src="~/Content/ViewContent/img/about/about_3.jpg" alt="">
+                        </div>
+                        <div class="img_2">
+                            <img src="~/Content/ViewContent/img/about/about_4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area_end -->
+    <!-- offers_area_start -->
+    <div class="offers_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-100">
+                        <span>Discount</span>
+                        <h3>Here is Discount</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <div class="about_thumb">
+                            <img src="~/Content/ViewContent/img/offers/1.png" alt="">
+                        </div>
+                        <h3>
+                            Flat mega Discount on <br>
+                            our services
+                        </h3>
+                        <ul>
+                            <li>Best Features</li>
+                            <li>2 Adults and 0 Childern</li>
+                            <li>Beautiful Look</li>
+                        </ul>
+                        <a class="popup-with-form book_now" href="#test-form" >book now</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <div class="about_thumb">
+                            <img src="~/Content/ViewContent/img/offers/2.png" alt="">
+                        </div>
+                        <h3>
+                            Flat mega Discount on <br>
+                            our services
+                        </h3>
+                        <ul>
+                            <li>Best Features</li>
+                            <li>3 Adults and 2 Childern</li>
+                            <li>Beautiful Look</li>
+                        </ul>
+                        <a class="popup-with-form book_now" href="#test-form">book now</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <div class="about_thumb">
+                            <img src="~/Content/ViewContent/img/offers/3.png" alt="">
+                        </div>
+                        <h3>
+                            Flat mega Discount on  <br>
+                            our services
+                        </h3>
+                        <ul>
+                            <li>Best Features</li>
+                            <li>5 Adults and 3 Childern</li>
+                            <li>Beautiful Look</li>
+                        </ul>
+                        <a class="popup-with-form book_now" href="#test-form">book now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offers_area_end -->
+    <!-- video_area_start -->
+    <div class="video_area video_bg overlay">
+        <div class="video_area_inner text-center">
+            <span>Sky Sea View</span>
+            <h3>
+                Save and Enjoy <br>
+                Holidays
+            </h3>
+            <a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y" class="video_btn popup-video">
+                <i class="fa fa-play"></i>
+            </a>
+        </div>
+    </div>
+    <!-- video_area_end -->
+    <!-- about_area_start -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="about_thumb2 d-flex">
+                        <div class="img_1">
+                            <img src="~/Content/ViewContent/img/about/3.jpg" alt="">
+                        </div>
+                        <div class="img_2">
+                            <img src="~/Content/ViewContent/img/about/4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5">
+                    <div class="about_info">
+                        <div class="section_title mb-20px">
+                            <span>Delicious Food</span>
+                            <h3>
+                                Our Cheifs Waiting <br>
+                                To Serve You Foods
+                            </h3>
+                        </div>
+                        <p>
+                            I'm so fast that last night I turned off the light switch in my hotel room and
+                            was in bed before the room was dark.The great advantage of a hotel is that it.
+                        </p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area_end -->
+    <!-- features_room_startt -->
+    <div class="features_room">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-100">
+                        <span>Availability</span>
+                        <h3>Room Types</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rooms_here">
+            <div class="single_rooms">
+                <div class="room_thumb">
+                    <img src="~/Content/ViewContent/img/rooms/1.png" alt="">
+                    <div class="room_heading d-flex justify-content-between align-items-center">
+                        <div class="room_heading_inner">
+                            <span>Starting From 8000</span>
+                            <h3>Superior Suite</h3>
+                            <span><h4 style="color:white">Master Suites:107,Mini-Suite or Junior Suite:108</h4></span>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="single_rooms">
+                <div class="room_thumb">
+                    <img src="~/Content/ViewContent/img/rooms/2.png" alt="">
+                    <div class="room_heading d-flex justify-content-between align-items-center">
+                        <div class="room_heading_inner">
+                            <span>Starting From 10000</span>
+                            <h3>Deluxe Suite</h3>
+                            <span><h4 style="color:white">King:106,Queen:105</h4></span>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="single_rooms">
+                <div class="room_thumb">
+                    <img src="~/Content/ViewContent/img/rooms/3.png" alt="">
+                    <div class="room_heading d-flex justify-content-between align-items-center">
+                        <div class="room_heading_inner">
+                            <span>Starting From 15000</span>
+                            <h3>Deluxe Double Room</h3>
+                            <span><h4 style="color:white">Single:101</h4></span>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="single_rooms">
+                <div class="room_thumb">
+                    <img src="~/Content/ViewContent/img/rooms/4.png" alt="">
+                    <div class="room_heading d-flex justify-content-between align-items-center">
+                        <div class="room_heading_inner">
+                            <span>Starting From 20000</span>
+                            <h3>Presidential Suite</h3>
+                            <span><h4 style="color:white">Double:102,Triple:103,Quad:104</h4></span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- features_room_end -->
+    <!-- forQuery_start -->
+    <div class="forQuery">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1 col-md-12">
+                    <div class="Query_border">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-xl-6 col-md-6">
+                                <div class="Query_text">
+                                    <p>For Booking & Detail</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <div class="phone_num">
+                                    <a href="#" class="mobile_no">+0000-1111-2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- forQuery_end-->
+    <!-- instragram_area_start -->
+    <div class="instragram_area">
+        <div class="single_instagram">
+            <img src="~/Content/ViewContent/img/instragram/1.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="~/Content/ViewContent/img/instragram/2.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="~/Content/ViewContent/img/instragram/3.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="~/Content/ViewContent/img/instragram/4.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="~/Content/ViewContent/img/instragram/5.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- instragram_area_end -->
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Address
+                            </h3>
+                            <p class="footer_text">
+                                Board Office,<br>
+                                Near Dilpasand, Karachi, Pakistan.
+                            </p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Reservation
+                            </h3>
+                            <p class="footer_text">
+                                +0000-1111-2<br>
+                                Skyview@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Navigation
+                            </h3>
+                            <ul>
+                                <li><a href="@Url.Action("Home","View")">Home</a></li>
+                                <li><a href="@Url.Action("Room","View")">Rooms</a></li>
+                                <li><a href="@Url.Action("About","View")">About</a></li>
+                                <li><a href="@Url.Action("Contact","View")">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Newsletter
+                            </h3>
+                            <form action="#" class="newsletter_form">
+                                <input type="text" placeholder="Enter your mail">
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-8 col-md-7 col-lg-9">
+                        <p class="copy_right">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                    <div class="col-xl-4 col-md-5 col-lg-3">
+                        <div class="socail_links">
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.twitter.com">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <form method="post"  asp-controller="View" asp-action="Home"  id="test-form" class="white-popup-block mfp-hide">
+        <div class="popup_box " >
+            <div class="popup_inner">
+                <h3>Check Availability</h3>
+                
+@using (Html.BeginForm("Home", "View", FormMethod.Post, new { @id = "formCustomerBooking" }))
+{
+                    <div class="row">
+                        <div class="col-xl-6">
+                            @Html.LabelFor(model => model.customer_name, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.customer_name, new { @class = "form-control", placeholder = "Name" })
+                            @Html.ValidationMessageFor(model => model.customer_name, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="col-xl-6">
+                            @Html.LabelFor(model => model.customer_address, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.customer_address, new { @class = "form-control", placeholder = "Address" })
+                            @Html.ValidationMessageFor(model => model.customer_address, null, new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            @Html.LabelFor(model => model.customer_email, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.customer_email, new { @class = "form-control", type = "email", placeholder = "Email" })
+                            @Html.ValidationMessageFor(model => model.customer_email, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="col-xl-6">
+                            @Html.LabelFor(model => model.customer_phone_no, new { @class = "control-label" })
+                            @Html.TextBoxFor(model => model.customer_phone_no, new { @class = "form-control",placeholder = "Phone No" })
+                            @Html.ValidationMessageFor(model => model.customer_phone_no, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6" style="margin-bottom:20px; margin-top:20px">
+                           
+                            @Html.LabelFor(model => model.booking_from, new { @class = "control-label" })
+                            @Html.EditorFor(model => model.booking_from, new { @class = "form-control"})
+                            @Html.ValidationMessageFor(model => model.booking_from, null, new { @class = "text-danger" })
+
+
+                        </div>
+                        <div class="col-xl-6"  style="margin-bottom:20px; margin-top:20px">
+                            @Html.LabelFor(model => model.booking_to, new { @class = "control-label" })
+                            @Html.EditorFor(model => model.booking_to, new { @class = "form-control"})
+                            @Html.ValidationMessageFor(model => model.booking_to, null, new { @class = "text-danger" })
+                          
+                        </div>
+                         </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            @Html.LabelFor(model => model.assigned_room, new { @class = "control-label" })
+   
+                            @Html.DropDownList("assigned_room", null, htmlAttributes: new { @class = "form-control"})
+                            @Html.ValidationMessageFor(model => model.assigned_room, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="col-xl-6">
+                            @Html.LabelFor(model => model.tbl_payment_type, new { @class = "control-label" })
+
+                            @Html.DropDownList("payment_type", null, htmlAttributes: new { @class = "form-control"})
+                            @Html.ValidationMessageFor(model => model.tbl_payment_type, "", new { @class = "text-danger" })
+
+                        </div>
+                        
+                            <div class="col-md-6" style="margin-left:150px;margin-bottom:20px; margin-top:20px">
+
+                                @Html.LabelFor(model => model.no_of_members, new { @class = "control-label" })
+                                @Html.TextBoxFor(model => model.no_of_members, new { @class = "form-control" , placeholder = "Member" })
+                                @Html.ValidationMessageFor(model => model.no_of_members, null, new { @class = "text-danger" })
+                            </div>
+                        
+                        
+                        
+                        <div class="col-xl-12"  style="margin-bottom:20px; margin-top:20px">
+                            <button id="btnSave" type="submit" class="boxed-btn3">Check Availability</button>
+                        </div>
+                    </div>
+}
+            </div>
+        </div>
+    </form>
+
+   
+    <!-- form itself end -->
+    <!-- JS here -->
+    <script src="~/Content/ViewContent/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="~/Content/ViewContent/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/Content/ViewContent/js/popper.min.js"></script>
+    <script src="~/Content/ViewContent/js/bootstrap.min.js"></script>
+    <script src="~/Content/ViewContent/js/owl.carousel.min.js"></script>
+    <script src="~/Content/ViewContent/js/isotope.pkgd.min.js"></script>
+    <script src="~/Content/ViewContent/js/ajax-form.js"></script>
+    <script src="~/Content/ViewContent/js/waypoints.min.js"></script>
+    <script src="~/Content/ViewContent/js/jquery.counterup.min.js"></script>
+    <script src="~/Content/ViewContent/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/Content/ViewContent/js/scrollIt.js"></script>
+    <script src="~/Content/ViewContent/js/jquery.scrollUp.min.js"></script>
+    <script src="~/Content/ViewContent/js/wow.min.js"></script>
+    <script src="~/Content/ViewContent/js/nice-select.min.js"></script>
+    <script src="~/Content/ViewContent/js/jquery.slicknav.min.js"></script>
+    <script src="~/Content/ViewContent/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/ViewContent/js/plugins.js"></script>
+    <script src="~/Content/ViewContent/js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="~/Content/ViewContent/js/contact.js"></script>
+    <script src="~/Content/ViewContent/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Content/ViewContent/js/jquery.form.js"></script>
+    <script src="~/Content/ViewContent/js/jquery.validate.min.js"></script>
+    <script src="~/Content/ViewContent/js/mail-script.js"></script>
+
+    <script src="~/Content/ViewContent/js/main.js"></script>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>
